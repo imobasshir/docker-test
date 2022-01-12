@@ -12,3 +12,4 @@ MongoClient.connect("mongodb://admin:pass@mongodb:27017", function(err, client) 
         response.send(result);
     });
 });
+// Sample file

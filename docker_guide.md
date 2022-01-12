@@ -197,3 +197,83 @@ services:
 $ docker-compose -f stack.yaml up
 $ docker-compose -f stack.yaml down
 ```
+
+> To deploy docker application we have to make thing which may be accesed from internet ,
+> so to make it possible we commit docker application(docker js application in this case) to git
+> For doing deployment application should be packeged into its docker container. For this we have to make docker image from our application
+
+### Deployment Process
+
+```
+1. make docker application
+2. commit it to git this will make ci(continuous integration)
+3. CI is done with help of Jenkins or manually
+4. Push it to docker repository
+```
+
+### Docker File
+
+```
+For making of docker image from application which is build by us
+We have to copy the container to docker i.e, artifacts(like jar,war,bundle.js)
+for doing this we have to make
+Blueprint for building images it is called as dockerfile
+this all will be on docker file not on the host machine i.e., localhost
+```
+
+### EXAMPLE
+
+js application
+
+> what will it do
+
+```
+install node
+
+set MONGO_INITDB_ROOT_USERNAME=admin
+set MONGO_INITDB_ROOT_PASSWORD=pass
+
+create  /home/app folder
+
+copy current folder files to /home/app
+
+start the app with: "node server.js"
+```
+
+> how file looks like
+
+```
+FROM node
+
+ENV MONGO_INITDB_ROOT_USERNAME=admin \
+    MONGO_INITDB_ROOT_PASSWORD=pass
+
+RUN mkdir -p /home/app
+
+COPY . /home/app
+
+CMD ["node","server.js"]			// CMD is the entry point it is called once only whreas RUN can be called many a times
+
+```
+
+> to bulid Dockerfile
+
+```
+$ docker build -t my-app:1.0 .
+```
+
+Same work Jenkins does,
+then it is pushed to docker repositiory
+
+### Docker Volume
+
+```
+It is used because every thing get lost so to stop getting thing lost we use volume
+for doing this we add some line in dockerfile
+ as
+  -v /host:/containerdirestory
+ or
+  -v /containerdirectory
+ or
+  -v nameofvol:/containerdirectory
+```
