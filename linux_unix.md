@@ -138,3 +138,36 @@ mv [file-name] [new-file-name]
 ```
 rm [file-name]
 ```
+
+### Remove Directory
+
+```
+rm -R [directory name]
+rm -rf [directory name] => forcefully close file
+```
+
+## Sudo
+
+> Super User Do - used for doing some administrative works
+
+### Disk Space Usage
+
+```
+df
+df
+```
+
+### Head, Tail, Find, Locate and Diff
+
+```
+head [file-name] => to show start of file
+head -n2 [file-name] => two line at start
+tail [file-name] => to show end of file
+tail -n2 [file-name] => two line at end of file
+locate ["*.txt"] => to locate file end with txt
+locate [file-name] => locate that file
+find . => to find in current directory
+find .. -type f => to find all the file in parent directory
+find . -type d => to find all the directory
+diff [file1] [file2] => to compare file line by line
+```
