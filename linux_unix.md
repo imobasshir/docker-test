@@ -234,3 +234,22 @@ Tab => for auto completion
 ![Command-Preveusly-Run That no] => to execute command from history form number
 ```
 
+### Other Commands
+```
+sort -r [file-name] => to sort file in particular(r/n/etc..) order
+top => to list all the process running 
+uname => to give name of kernels
+uname -m => architecture of os
+uname -r => kernel version
+uname -o => type of os
+cat /etc/os-release => os info 
+lscpu => cpu usafe
+free => free memory space
+vmstat => virtual memory stat
+zip [folder-name.zip] [file1] [file2] => to zip file
+unzip [file-name.zip] => to unzip file
+hostname => to get host name
+hostname -i => to get host ip
+useradd [name-of-user] => to create user
+userdel [name-of-user] => to delete user
+```
