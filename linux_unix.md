@@ -171,3 +171,34 @@ find .. -type f => to find all the file in parent directory
 find . -type d => to find all the directory
 diff [file1] [file2] => to compare file line by line
 ```
+
+### Check User
+
+```
+whoami
+```
+
+### File and Folder Permission
+
+There are three types of permissions in linux r-read w-write x-execute.
+File permission consists of 9 charecters where 1st 3 charecter is for user, next 3 for group, and last 3 for others.
+
+```
+chmod u=rwx,g=rx,o=r [file-name]
+chmod 777 [file-name]
+```
+
+here we can use octal numbers where 4 stands for read, 2 stands for write, 1 for execute, 0 for no permission and 7 for all permissions.
+and if we want 2 permission to some user then we sum up these numbers.
+
+### Change User
+
+```
+chown [other-user] [file/folder-name]
+```
+
+### Performing Action on Multiple File
+
+```
+find . -type f -name "*.txt" -exec rm {} +
+```
