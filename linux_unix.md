@@ -202,3 +202,35 @@ chown [other-user] [file/folder-name]
 ```
 find . -type f -name "*.txt" -exec rm {} +
 ```
+
+### Find Keyword in File
+
+```
+grep ["Text to find"] [file-name]
+grep -i ["Text to find"] [file-name] => to remove case sensitivity
+grep -n ["Text to find"] [file-name] => to get word and line no
+grep -w ["Text to find"] [file-name] => complete word with given text
+grep -win ["Text to find"] ./*.txt => to find following word in all file of
+grep -rwin ["Text to find"] ./*.txt => to find following word in all file recursively
+```
+
+### History
+
+```
+history
+history | grep ["command"] => show history with following command
+```
+
+### Terminal Shortcuts
+
+```
+Ctrl+A => to move cursor at start of command
+Ctrl+E => to move cursor at end of command
+Ctrl+K => to remove every thing after cursor
+Ctrl+U => to remove every thing of that command
+Ctrl+R => to search command which is run previously
+clear => to clear the terminal
+Tab => for auto completion
+![Command-Preveusly-Run That no] => to execute command from history form number
+```
+
