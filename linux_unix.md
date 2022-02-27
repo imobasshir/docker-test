@@ -83,7 +83,7 @@ cat [first-file] [second-file] [third-file] > [new-file]
 ### About Command
 
 ```
-man
+man [command-name]
 ```
 
 ### Transfer case of content of file
@@ -100,3 +100,41 @@ mkdir -p [folder-1]/[folder-2]/[folder-3]
 
 this will create new folder folder-2 b/w folder-1 and folder-3 where folder-1 & folder-3 are present it will create
 new folder b/w along side folder-3
+
+### Create New File
+
+```
+touch [file-name]
+```
+
+### Create Copy of File
+
+```
+cp [file-name] [new-file]
+```
+
+### Move File
+
+```
+mv [file-name] [new-folder]
+```
+
+### Rename File
+
+```
+mv [file-name] [new-file-name]
+```
+
+### Folders
+
+```
+./ => Current Folder
+../ => One Folder Back
+.../ => Two Folder Back
+```
+
+### Remove File
+
+```
+rm [file-name]
+```
