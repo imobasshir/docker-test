@@ -84,6 +84,7 @@ docker logs [container-id/name] | tail
 
 ```
 docker exec -it [container-id/name] /bin/bash or /bin/sh
+docker run -it [container-name]
 ```
 
 ### Docker Image
